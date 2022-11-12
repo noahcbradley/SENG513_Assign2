@@ -1,4 +1,5 @@
 
+// CONSTANTS
 const ROWS = 4;
 const COLUMNS = 4;
 const BOARD_WIDTH = 750;
@@ -17,6 +18,7 @@ drawInitialScores();
 drawBoard();
 playGame();
 
+// Drawing the starting scores as divs - they get edited later
 function drawInitialScores(){
   html += '<div class="score" style="left:540px; top:250px; color: red" player="1">Player Score: 0</div>';
   html += '<div class="score" style="left:765px; top:250px; color: green" player="2">Player Score: 0</div>';
@@ -24,6 +26,7 @@ function drawInitialScores(){
   html += '<div class="finalscore" style="left: 725px; top: 850px"></div>';
 }
 
+//Draw the initial starting board
 function drawBoard () {
   var lineid = 0;
   var boxid = 0;
@@ -48,6 +51,7 @@ function drawBoard () {
   $("#app").html(html);
 }
 
+//Loop to play the game that continues to get called until the game is over
 function playGame () {
 
   if((PLAYER1_SCORE + PLAYER2_SCORE + PLAYER3_SCORE) == 9){
@@ -80,15 +84,18 @@ function playGame () {
 	});
 }
 
+//Function to check if the line is taken already
 function checkIfTaken(line){
   var isClicked = $(line).attr("lineclicked") == "false";
   return isClicked;
 }
 
+//Updates locally stored array to determine if line is taken
 function updateLineArray(lineindex){
   LINE_ARRAY[lineindex] = true;
 }
 
+//Algorithm to see if a box has been made by a player
 function checkBox(){
   playerScored = false;
   $("div.box").each(function(){
@@ -157,6 +164,7 @@ function fillBox(box){
   playerScored = true;
 }
 
+//Update the score board if one or two boxes have been made
 function updateScores(){
 
   $("div.score").each(function(){
@@ -176,6 +184,7 @@ function updateScores(){
 
 }
 
+//Called after the board is full (9 completed boxes)
 function determineWinner() {
   $("div.finalscore").each(function(){
     // Player 1 wins

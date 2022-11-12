@@ -1,0 +1,83 @@
+
+#text_color_white{
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 5%;
+}
+
+.score{
+    color: white;
+    position: absolute;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.finalscore{
+    color: white;
+    position: absolute;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.dot{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	border-radius: 100%;
+	background-color: white;	
+	z-index: 1000;	
+}
+
+.line{
+	position: absolute;
+	background-color: black;
+}
+
+.box{
+	width: 128px;
+	height: 115px;
+	position: absolute;
+	background-color: black;
+	line-height: 50px;
+}
+
+.horizontalline{
+	height: 5px;
+	width: 130px;
+}
+
+.verticalline{
+	height: 130px;
+	width: 5px;
+}
+
+.line:hover{
+	background-color: white;
+}
+
+.red{
+	background-color: red;
+}
+
+.green{
+	background-color: green;
+}
+
+.blue{
+	background-color: blue;
+}
+
